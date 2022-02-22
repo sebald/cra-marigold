@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Column, Columns, Text, MarigoldProvider } from '@marigold/components';
+import theme from '@marigold/theme-b2b'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MarigoldProvider theme={theme}>
+      <Columns space="xsmall" verticalAlign="top" horizontalAlign="left">
+  <Column width={6}>
+    <Text>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      dignissim.
+    </Text>
+  </Column>
+  <Column width={6}>
+    <Text>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      dignissim.
+    </Text>
+  </Column>
+</Columns>
+    </MarigoldProvider>
   );
 }
 
